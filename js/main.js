@@ -15,20 +15,35 @@
     let buttonHolder = document.getElementById('row')
     
     // handle the submit
-    async function handleSubmit(e){
-        e.preventDefault()
-        let cityName = e.target.cityName.value
-        // make the custom funtion GET FROM API request
-        let city = await getCityInfo(cityName)
-        // now create the input variable
-        min_temp = city.main.temp_min
-        max_temp = city.main.temp_max
-        weather = city.weather[0].main
-        humidity = city.main.humidity
-        name1 = city.name
-        // console.log(min_temp, max_temp, weather, humidity)
-        // Build the DIV To hoouse the information
-        await buildTable(min_temp, max_temp, weather, humidity, name1)
+    async function handleSubmit(e, cityName=null){
+        if (e===0){
+            let city = await getCityInfo(cityName)
+            // now create the input variable
+            min_temp = city.main.temp_min
+            max_temp = city.main.temp_max
+            weather = city.weather[0].main
+            humidity = city.main.humidity
+            name1 = city.name
+            // console.log(min_temp, max_temp, weather, humidity)
+            // Build the DIV To hoouse the information
+            await buildTable(min_temp, max_temp, weather, humidity, name1)
+
+        } else {
+
+            e.preventDefault()
+            let cityName = e.target.cityName.value
+            // make the custom funtion GET FROM API request
+            let city = await getCityInfo(cityName)
+            // now create the input variable
+            min_temp = city.main.temp_min
+            max_temp = city.main.temp_max
+            weather = city.weather[0].main
+            humidity = city.main.humidity
+            name1 = city.name
+            // console.log(min_temp, max_temp, weather, humidity)
+            // Build the DIV To hoouse the information
+            await buildTable(min_temp, max_temp, weather, humidity, name1)
+        }
     };
     // creating a local scope and build API builder
     async function getCityInfo(cityName){
@@ -49,7 +64,9 @@
             let button = myButtons[i]
             button.addEventListener('click', () => {
                 let tableVar = document.getElementById('cityTable');
-                tableVar.innerHTML = 'this is a test'
+                // call handleSubmit manually and take the if statement route
+                handleSubmit(0, button.innerHTML)
+                // tableVar.innerHTML = button.innerHTML
             })
         }
     }

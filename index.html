@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="./js/main.js" defer></script> <!-- add defer to script tag or put script element at bottom of body -->
+        <title>City Weather by Joseph Madenjian</title>
+        <style>
+             table {
+            border-collapse: collapse;
+            }
+            td, th {
+                border: 1px solid #0e0c0c;
+                padding: 10px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            td{
+                text-align: center;
+            }
+            .color{
+                background-color: #000000;
+                color: #f8f7f7;
+                text-align: center;
+            }
+            .color1 {
+                background-color: rgb(212, 68, 58);
+            }
+            .color2 {
+                background-color: rgb(44, 44, 168);
+            }
+            .color3 {
+                background-color: rgb(67, 142, 185);
+            }
+            .color4 {
+                background-color: rgb(41, 126, 59);
+            }
+            .color5 {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Enter a City To Find the Weather!</span>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1 class="text-center" id="top-header">Welcome to the City Weather Finder</h1>
+            <div class="row" id="row">
+                <!-- Unique button favorite system AKA will populate buttons as the user searches-->
+                <!-- <div class="col-2" onclick="functionname()"><button>Make</button></div> -->
+                <!-- <div class="col-2"><button>Custom</button></div>
+                <div class="col-2"><button>City</button></div>
+                <div class="col-2"><button>Buttons</button></div>
+                <div class="col-2"><button>Red</button></div>
+                <div class="col-2"><button>Teal</button></div> -->
+            </div>
+
+            <div class="row">
+                <form action="" id="cityForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="cityName" placeholder="Enter City Name">
+                        <input type="submit" class="btn btn-outline-info w-100" value="submit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex justify-content-center" id="cityContainer">
+                <!-- JavaScript will grab this row and add columns when form is submitted -->
+
+                <!-- This is the display format -->
+                <table id="cityTable">
+                    
+                <!-- child 1
+                    <thead class="color1">
+                        <th><h1>High</h1></th>
+                    </thead>
+                    
+                    child 1a
+                    <tbody>
+                        <tr>
+                            <td><h2>temp</h2></td>
+                        </tr>
+                    </tbody>
+
+                    child 2
+                    <thead class="color2">
+                        <th><h1>High</h1></th>
+                    </thead>
+
+                    child 2a
+                    <tbody>
+                        <tr>
+                            <td><h2>temp</h2></td>
+                        </tr>
+                    </tbody>
+
+                    child 3
+                    <thead class="color3">
+                        <th><h1>High</h1></th>
+                    </thead>
+
+                    child 3a
+                    <tbody>
+                        <tr>
+                            <td><h2>temp</h2></td>
+                        </tr>
+                    </tbody>
+
+                    child 4
+                    <thead class="color4">
+                        <th><h1>High</h1></th>
+                    </thead>
+
+                    child 4a
+                    <tbody>
+                        <tr>
+                            <td><h2>temp</h2></td>
+                        </tr>
+                    </tbody> -->
+
+                </table>
+                
+
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html
